@@ -16,7 +16,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<p>Home test 1 </p>
 	</div>
 
-	
 </div>
 
 </body>
