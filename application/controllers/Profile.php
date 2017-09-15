@@ -6,6 +6,6 @@ class Profile extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('profile test 1');
+		$this->load->view('profile');
 	}
 }
