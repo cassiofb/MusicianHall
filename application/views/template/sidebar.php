@@ -21,7 +21,7 @@
             <li><a href="index2.html">Dashboard2</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="invoice.html">Invoice</a></li>
+            <li><a href="messages">Invoice</a></li>
             <li><a href="chat.html">Chat option</a></li>
           </ul>
         </li>

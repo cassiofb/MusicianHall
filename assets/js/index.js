@@ -7,6 +7,6 @@ Vue.component('todo-item', {
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Richard!'
+    message: 'Cassiano'
   }
 })
