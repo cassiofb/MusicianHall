@@ -1,4 +1,3 @@
-
     <!--sidebar-menu-->
     <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
       <ul>
@@ -27,3 +26,11 @@
       </ul>
     </div>
     <!--sidebar-menu-->
+    
+    <div id="content">
+
+      <div id="breadcrumb">
+        <a href="index.html" class="tip-bottom" data-original-title="Go to Messages"><i class="<?php echo $pageIcon ?>"></i> <?php echo $namePage; ?></a>
+      </div>
+
+      <div class="container-fluid">

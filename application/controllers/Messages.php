@@ -7,8 +7,9 @@ class Messages extends CI_Controller {
 	
 	public function index()
 	{
-		//$this->output->enable_profiler(TRUE);
 		$data['page'] = $this->page;
+		$data['namePage'] = ucwords( $data['page'] );
+		$data['pageIcon'] = 'icon-inbox';
 		$this->load->view('base', $data);
 	}
 }

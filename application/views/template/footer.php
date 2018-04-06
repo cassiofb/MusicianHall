@@ -1,3 +1,6 @@
+  </div>
+  
+</div>
 <!--Footer-part-->
 
     <div class="row-fluid">
