@@ -1,15 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+require_once './application/core/MY_Controller.php';
 
-	private $page = 'home';
+class Home extends MY_Controller {
+
+	public function __constructor() {
+		$this->page = 'home';
+		$this->icon = 'icon-inbox';
+		parent::construtor();
+	}
 	
-	public function index()
-	{
-		$data['page'] = $this->page;
-		$data['namePage'] = ucwords( $data['page'] );
-		$data['pageIcon'] = 'icon-inbox';
+	public function index()	{
+		$data = $this->preIndex($this);
+		var_dump($data);
+		die('teste');
 		$this->load->view('base', $data);
 	}
+
+	public function teste () {
+		echo 'asdfasdfas';
+	}
+
 }

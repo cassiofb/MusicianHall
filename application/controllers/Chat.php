@@ -1,12 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Chat extends CI_Controller {
+class Chat extends MY_Controller {
 
-	private $page = 'chat';
+	public function __constructor() {
+		$this->page = 'chat';
+		$this->icon = 'icon-inbox';
+		parent::construtor();
+	}
 	
-	public function index()
-	{
+	public function index()	{
 		//$this->output->enable_profiler(TRUE);
 		$data['page'] = $this->page;
 		$data['namePage'] = ucwords( $data['page'] );
