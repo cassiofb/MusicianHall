@@ -3,7 +3,6 @@
       <h1><a href="dashboard.html">Musician Hall</a></h1>
     </div>
     <!--close-Header-part--> 
-
     <div id="app">
 
       <!--top-Header-menu-->
@@ -22,7 +21,7 @@
             <ul class="dropdown-menu">
               <li><a class="sAdd" title="" href="#"><i class="icon-plus"></i> new message</a></li>
               <li class="divider"></li>
-              <li><a class="sInbox" title="" href="messages"><i class="icon-envelope"></i> inbox</a></li>
+              <li><a class="sInbox" title="" href="<?php echo base_url('messages'); ?>"><i class="icon-envelope"></i> inbox</a></li>
               <li class="divider"></li>
               <li><a class="sOutbox" title="" href="messages"><i class="icon-arrow-up"></i> outbox</a></li>
               <li class="divider"></li>
