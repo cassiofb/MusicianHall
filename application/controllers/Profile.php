@@ -3,10 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Profile extends MY_Controller {
 
-	public function __constructor() {
+	public function __construct() {
 		$this->page = 'profile';
 		$this->icon = 'icon-inbox';
-		parent::construtor();
+		parent::__construct();
 	}
 	
 	public function index()	{

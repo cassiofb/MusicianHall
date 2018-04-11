@@ -3,10 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Chat extends MY_Controller {
 
-	public function __constructor() {
+	public function __construct() {
 		$this->page = 'chat';
 		$this->icon = 'icon-inbox';
-		parent::construtor();
+		parent::__construct();
 	}
 	
 	public function index()	{

@@ -6,7 +6,9 @@ class MY_Controller extends CI_Controller {
 	protected $page;
 	protected $icon;
 
-	public function __constructor() {}
+	public function __construct() {
+		parent::__construct();
+	}
 
 	protected function preIndex($c)	{
 		$data['page'] = $c->page;
