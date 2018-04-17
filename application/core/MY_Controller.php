@@ -7,7 +7,12 @@ class MY_Controller extends CI_Controller {
 	protected $icon;
 
 	public function __construct() {
+
 		parent::__construct();
+
+		$logged = $this->session->userdata("logged");
+		if ($logged != 1)
+			redirect(base_url('login'));
 	}
 
 	protected function preIndex($c)	{

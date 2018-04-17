@@ -15,8 +15,4 @@ class Home extends MY_Controller {
 		$this->load->view('base', $data);
 	}
 
-	public function teste () {
-		echo 'asdfasdfas';
-	}
-
 }
