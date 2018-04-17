@@ -16,11 +16,10 @@ class Login extends CI_Controller {
 		$user = $this->input->post("user");
 		$passwd = $this->input->post("passwd");
 
-		if($user == "cassianofb22@gmail.com" || $user == "willrpg@hotmail.com" && $passwd == "159951" || $passwd == "richard") 
-		{
+		if($user == "cassianofb22@gmail.com" || $user == "willrpg@hotmail.com" && $passwd == "159951" || $passwd == "richard") {
 			$this->session->set_userdata("logged", 1);
-			redirect(base_url());
-		} else{
+			redirect(base_url('home'));
+		} else {
 			$data['error'] = "Usuário/Senha inválidos";
 			$this->load->view("login", $data);
 		}
