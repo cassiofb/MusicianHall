@@ -20,8 +20,8 @@ class Login extends CI_Controller {
 			$this->session->set_userdata("logged", 1);
 			redirect(base_url('home'));
 		} else {
-			$data['error'] = "Usuário/Senha inválidos";
-			$this->load->view("login", $data);
+			$dados['erro'] = "Usuário/Senha incorretos";
+			redirect(base_url("login", $dados));
 		}
 	}
 

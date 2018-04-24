@@ -2,9 +2,8 @@
     <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
       <ul>
         <li class="active"><a href="<?php echo base_url('home'); ?>"><i class="icon icon-home"></i> <span>Home</span></a> </li>
-        <li> <a href="<?php echo base_url('messages'); ?>"><i class="icon icon-signal"></i> <span>Menssagens</span></a> </li>
-        <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
-        <li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Full width</span></a></li>
+        <li><a href="<?php echo base_url('chat'); ?>"><i class="icon icon-comments"></i> <span>Chat</span></a></li>
+        <li><a href=""<?php echo base_url('Contacts'); ?>""><i class="icon icon-group"></i> <span>Contatos</span></a></li>
         <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Forms</span> <span class="label label-important">3</span></a>
           <ul>
             <li><a href="form-common.html">Basic Form</a></li>

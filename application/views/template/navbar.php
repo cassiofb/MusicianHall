@@ -30,7 +30,9 @@
           </li>
           <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
           <li class=""><a title="" href="<?php echo base_url('login/loggout') ?>"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+          <li class=""><a title="" href="www.facebook.com"><i class="icon icon-facebook-sign"></i></a></li>
         </ul>
+
       </div>
 
     </div>
