@@ -2,12 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
-
-	
 	
 	public function index()
 	{
-		
 		$this->load->view('login');
 	}
 
@@ -21,7 +18,8 @@ class Login extends CI_Controller {
 			redirect(base_url('home'));
 		} else {
 			$dados['erro'] = "Usuário/Senha incorretos";
-			redirect(base_url("login", $dados));
+			$this->session->set_flashdata('erroLogin', 'Credênciais inválidas!');
+			redirect(base_url("login"));
 		}
 	}
 
