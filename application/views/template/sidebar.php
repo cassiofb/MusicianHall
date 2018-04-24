@@ -4,24 +4,6 @@
         <li class="active"><a href="<?php echo base_url('home'); ?>"><i class="icon icon-home"></i> <span>Home</span></a> </li>
         <li><a href="<?php echo base_url('chat'); ?>"><i class="icon icon-comments"></i> <span>Chat</span></a></li>
         <li><a href=""<?php echo base_url('Contacts'); ?>""><i class="icon icon-group"></i> <span>Contatos</span></a></li>
-        <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Forms</span> <span class="label label-important">3</span></a>
-          <ul>
-            <li><a href="form-common.html">Basic Form</a></li>
-            <li><a href="form-validation.html">Form with Validation</a></li>
-            <li><a href="form-wizard.html">Form with Wizard</a></li>
-          </ul>
-        </li>
-        <li><a href="buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
-        <li><a href="interface.html"><i class="icon icon-pencil"></i> <span>Eelements</span></a></li>
-        <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>Addons</span> <span class="label label-important">5</span></a>
-          <ul>
-            <li><a href="index2.html">Dashboard2</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="messages">Invoice</a></li>
-            <li><a href="chat.html">Chat option</a></li>
-          </ul>
-        </li>
       </ul>
     </div>
     <!--sidebar-menu-->
