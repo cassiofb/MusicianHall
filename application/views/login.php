@@ -11,7 +11,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="assets/css/main.css" />
 
-    </head>
+</head>
     <body>
         <div id="loginbox">
             <form id="loginform" class="form-vertical" action="<?php echo base_url('login/loggin'); ?>" method="POST">
