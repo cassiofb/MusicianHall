@@ -19,7 +19,7 @@
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box" style="position: relative;">
-                            <span class="error-message"><?php echo $this->session->flashdata('erroLogin'); ?></span>
+                            <span class="error-message" style="width: 100%;"><?php echo $this->session->flashdata('erroLogin'); ?></span>
                             <span class="add-on bg_lg"><i class="icon-user"> </i></span><input type="text" name="user" placeholder="Username" />
                         </div>
                     </div>
