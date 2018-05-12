@@ -11,6 +11,7 @@
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/jquery.gritter.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/main.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 

@@ -3,7 +3,6 @@
       <h1><a href="dashboard.html">Musician Hall</a></h1>
     </div>
     <!--close-Header-part--> 
-
     <div id="app">
 
       <!--top-Header-menu-->
@@ -20,18 +19,18 @@
           </li>
           <li class="dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Mensagens</span> <span class="label label-important">5</span> <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a class="sAdd" title="" href="#"><i class="icon-plus"></i> new message</a></li>
+              <li><a class="sAdd" title="" href="<?php echo base_url('newmessage') ?>"><i class="icon-plus"></i> new message</a></li>
               <li class="divider"></li>
-              <li><a class="sInbox" title="" href="messages"><i class="icon-envelope"></i> inbox</a></li>
-              <li class="divider"></li>
-              <li><a class="sOutbox" title="" href="messages"><i class="icon-arrow-up"></i> outbox</a></li>
+              <li><a class="sInbox" title="" href="<?php echo base_url('messages'); ?>"><i class="icon-envelope"></i> inbox</a></li>
               <li class="divider"></li>
               <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i> trash</a></li>
             </ul>
           </li>
-          <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
-          <li class=""><a title="" href="login"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+          <li class=""><a title="" href="<?php echo base_url('settings') ?>"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
+          <li class=""><a title="" href="<?php echo base_url('login/loggout') ?>"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+          <li class=""><a title="" href="www.facebook.com"><i class="icon icon-facebook-sign"></i></a></li>
         </ul>
+
       </div>
 
     </div>

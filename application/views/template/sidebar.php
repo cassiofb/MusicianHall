@@ -1,28 +1,15 @@
     <!--sidebar-menu-->
     <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
       <ul>
-        <li class="active"><a href="home"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
-        <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
-        <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
-        <li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Full width</span></a></li>
-        <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Forms</span> <span class="label label-important">3</span></a>
-          <ul>
-            <li><a href="form-common.html">Basic Form</a></li>
-            <li><a href="form-validation.html">Form with Validation</a></li>
-            <li><a href="form-wizard.html">Form with Wizard</a></li>
-          </ul>
+        <li class="active"><a href="<?php echo base_url('home'); ?>"><i class="icon icon-home"></i> <span>Home</span></a> </li>
+        <li>
+          <a href="<?php echo base_url('chat'); ?>"><i class="icon icon-comments"></i> <span>Chat</span></a>
+          <a href="#" style="position: absolute; top: 0; right: 0; border-left: 1px solid #555; box-shadow: -1px 0px 0px #222; padding: 10px 0 10px 10px;" 
+            data-toggle="modal" data-target="#exampleModal">
+            <i class="icon icon-plus"></i>
+          </a>
         </li>
-        <li><a href="buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
-        <li><a href="interface.html"><i class="icon icon-pencil"></i> <span>Eelements</span></a></li>
-        <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>Addons</span> <span class="label label-important">5</span></a>
-          <ul>
-            <li><a href="index2.html">Dashboard2</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="messages">Invoice</a></li>
-            <li><a href="chat.html">Chat option</a></li>
-          </ul>
-        </li>
+        <li><a href=""<?php echo base_url('Contacts'); ?>""><i class="icon icon-group"></i> <span>Contatos</span></a></li>
       </ul>
     </div>
     <!--sidebar-menu-->

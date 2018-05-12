@@ -1,15 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Messages extends CI_Controller {
+class Messages extends MY_Controller {
 
-	private $page = 'messages';
+	public function __construct() {
+		$this->page = 'messages';
+		$this->icon = 'icon-inbox';
+		parent::__construct();
+	}
 	
 	public function index()
 	{
-		$data['page'] = $this->page;
-		$data['namePage'] = ucwords( $data['page'] );
-		$data['pageIcon'] = 'icon-inbox';
+		$data = $this->preIndex($this);
 		$this->load->view('base', $data);
 	}
 }
