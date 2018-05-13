@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 // $route['profile'] = 'profile';
 // $route['messages'] = 'messages';
 // $route['login'] = 'login';
+//$route['user/search'] = 'user/serach';

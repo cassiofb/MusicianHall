@@ -21,4 +21,11 @@ class MY_Controller extends CI_Controller {
 		$data['pageIcon'] = $c->icon;
 		return $data;
 	}
+
+	protected function dd($target) {
+		echo '<pre>';
+		print_r($target);
+		echo '</pre>';
+		die('...');
+	}
 }

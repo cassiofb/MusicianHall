@@ -10,6 +10,9 @@ class User_model extends CI_Model {
 
     public function get_last_ten_entries()
     {
+        $this->db->select('users.name, users.email, user_info.*, functions.name as function');
+        $this->db->join('user_info', 'user_info.user_id = users.id');
+        $this->db->join('functions', 'user_info.function_id = functions.id');
         $query = $this->db->get('users', 10);
         return $query->result();
     }
@@ -43,6 +46,18 @@ class User_model extends CI_Model {
         $this->email    = $_POST['email'];
         $this->password = $_POST['password'];
         $this->db->update('users', $this, array('id' => $_POST['id']));
+    }
+
+    public function get_entries_by_term($term)
+    {
+        $this->db->select('users.name, users.email, user_info.*, functions.name as function');
+        $this->db->join('user_info', 'user_info.user_id = users.id');
+        $this->db->join('functions', 'user_info.function_id = functions.id');
+        $this->db->like('user_info.description', $term);
+        $this->db->or_like('users.name', $term);
+        $this->db->or_like('functions.name', $term);
+        $query = $this->db->get('users', 10);
+        return $query->result();
     }
 
 }

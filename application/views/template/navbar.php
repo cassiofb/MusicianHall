@@ -37,7 +37,9 @@
     <!--close-top-Header-menu-->
      <!--start-top-serch-->
     <div id="search">
-      <input type="text" placeholder="Search here..."/>
-      <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+      <form id="search-form" class="" action="<?php echo base_url('user/search'); ?>" method="POST">
+        <input type="text" name="term" placeholder="Busque aqui..."/>
+        <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+      </form>
     </div>
     <!--close-top-serch-->
