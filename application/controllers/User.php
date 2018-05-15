@@ -19,6 +19,9 @@ class User extends MY_Controller {
 	public function search() {
 		$data = $this->preIndex($this);
 		$data['users'] = $this->user_model->get_entries_by_term($_POST['term']);
+		if (empty($data['users'])) {
+			$data['msg_retorno'] = 'Nenhum resultado encontrado!';
+		}
 		//$this->dd($data['users']);
 		$this->load->view('base', $data);
 	}

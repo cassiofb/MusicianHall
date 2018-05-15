@@ -19,6 +19,7 @@
           </label>
         </div>
       </div>
+      <span style="color: #d81313; margin-left: 2px;"><?php echo $msg_retorno ?? '';  ?></span>
       <table class="table table-bordered data-table dataTable" id="DataTables_Table_0">
         <thead>
           <tr role="row">
