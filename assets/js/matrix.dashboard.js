@@ -22,7 +22,7 @@ $(document).ready(function(){
                },
                grid: { hoverable: true, clickable: true },
                yaxis: { min: -1.6, max: 1.6 }
-		   });
+		 });
     
 	// === Point hover in chart === //
     var previousPoint = null;

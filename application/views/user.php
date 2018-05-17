@@ -4,23 +4,12 @@
     <h5>Usuários encontrados</h5>
   </div>
   <div class="widget-content nopadding">
-    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">
+    <div id="DataTables_wrapper" class="dataTables_wrapper" role="grid">
       <div class="">
-        <div id="DataTables_Table_0_length" class="dataTables_length">
-          <label>
-            Mostrar 
-            <select size="1" name="DataTables_Table_0_length" aria-controls="DataTables_Table_0">
-              <option value="10" selected="selected">10</option>
-              <option value="25">25</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-            </select>
-            registros
-          </label>
-        </div>
+
       </div>
       <span style="color: #d81313; margin-left: 2px;"><?php echo $msg_retorno ?? '';  ?></span>
-      <table class="table table-bordered data-table dataTable" id="DataTables_Table_0">
+      <table class="table table-bordered data-table dataTable" id="DataTables_Table_0" pagination='<?php echo $pagination; ?>'>
         <thead>
           <tr role="row">
             <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 202px;">
@@ -49,25 +38,9 @@
           <?php } ?>
         </tbody>
       </table>
-      <div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
-        <div class="dataTables_filter" id="DataTables_Table_0_filter">
-          <label>Search: <input type="text" aria-controls="DataTables_Table_0"></label>
-        </div>
-        
-        <div class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers" id="DataTables_Table_0_paginate">
-          <a tabindex="0" class="first ui-corner-tl ui-corner-bl fg-button ui-button ui-state-default ui-state-disabled" id="DataTables_Table_0_first">First</a>
-          <a tabindex="0" class="previous fg-button ui-button ui-state-default ui-state-disabled" id="DataTables_Table_0_previous">Previous</a>
-          <span>
-            <a tabindex="0" class="fg-button ui-button ui-state-default ui-state-disabled">1</a>
-            <a tabindex="0" class="fg-button ui-button ui-state-default">2</a>
-            <a tabindex="0" class="fg-button ui-button ui-state-default">3</a>
-            <a tabindex="0" class="fg-button ui-button ui-state-default">4</a>
-            <a tabindex="0" class="fg-button ui-button ui-state-default">5</a>
-          </span>
-          <a tabindex="0" class="next fg-button ui-button ui-state-default" id="DataTables_Table_0_next">Next</a>
-          <a tabindex="0" class="last ui-corner-tr ui-corner-br fg-button ui-button ui-state-default" id="DataTables_Table_0_last">Last</a>
-        </div>
-      </div>
+<!--	  <div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">-->
+<!--		--><?php //echo $pagination; ?>
+<!--	  </div>-->
     </div>
   </div>
 </div>

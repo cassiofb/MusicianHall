@@ -48,7 +48,7 @@ class User_model extends CI_Model {
         $this->db->update('users', $this, array('id' => $_POST['id']));
     }
 
-    public function get_entries_by_term($term)
+    public function get_entries_by_term($term, $limit = null, $offset = null)
     {
         $this->db->select('users.name, users.email, user_info.*, functions.name as function');
         $this->db->join('user_info', 'user_info.user_id = users.id');
@@ -56,8 +56,17 @@ class User_model extends CI_Model {
         $this->db->like('user_info.description', $term);
         $this->db->or_like('users.name', $term);
         $this->db->or_like('functions.name', $term);
-        $query = $this->db->get('users', 10);
+
+        if ($limit) {
+            $this->db->limit($limit, $offset);
+        }
+
+        $query = $this->db->get('users');
         return $query->result();
+    }
+
+    public function CountAll() {
+        return $this->db->count_all('users');
     }
 
 }
