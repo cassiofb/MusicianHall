@@ -9,3 +9,29 @@
 .error-message-none {
 	display: none;
 }
+
+.card {
+	position: relative;
+}
+
+.card .icon-button-top {
+	top: 0;
+}
+
+.card .icon-button-bottom {
+	bottom: 0;
+}
+
+.card .icon-button-left, .card .icon-button-right {
+	position: absolute;
+	font-size: 16px;
+}
+
+.card .icon-button-left {
+	position: absolute;
+	left: 0;
+}
+
+.card .icon-button-right {
+	right: 0;
+}

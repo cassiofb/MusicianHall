@@ -9,7 +9,7 @@
             <i class="icon icon-plus"></i>
           </a>
         </li>
-        <li><a href=""<?php echo base_url('Contacts'); ?>""><i class="icon icon-group"></i> <span>Contatos</span></a></li>
+        <li><a href="<?php echo base_url('contacts'); ?>"><i class="icon icon-group"></i> <span>Contatos</span></a></li>
       </ul>
     </div>
     <!--sidebar-menu-->
