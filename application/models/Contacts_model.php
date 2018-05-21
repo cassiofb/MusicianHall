@@ -7,7 +7,7 @@ class Contacts_model extends CI_Model {
 
     public function get_last_ten_entries()
     {
-        $this->db->select('users.name, users.email, user_info.*, functions.name as function');
+        $this->db->select('users.name, users.email, user_info.*, ' . $this->table . '.connection_id, functions.name as function');
         $this->db->join('users', $this->table . '.connection_id = users.id');
         $this->db->join('user_info', 'user_info.user_id = users.id');
         $this->db->join('functions', 'user_info.function_id = functions.id');

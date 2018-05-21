@@ -35,7 +35,7 @@ $config['base_url'] = 'http://localhost/MusicianHall/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'home';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

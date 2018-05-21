@@ -21,6 +21,6 @@ class Contacts extends MY_Controller {
 	public function remove($id) {
 		$this->contacts_model->remove($id);
 		$data['msg_remove'] = 'Contato removido com sucesso';
-		$this->load->view('base', $data);
+		redirect('/contacts/');
 	}
 }
