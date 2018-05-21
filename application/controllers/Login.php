@@ -29,6 +29,10 @@ class Login extends CI_Controller {
 
 		if(md5($passwd) === $_user->password) {
 			$this->session->set_userdata("logged", 1);
+			$this->session->set_userdata("user_email", $_user->email);
+			$this->session->set_userdata("user_name", $_user->name);
+			$this->session->set_userdata("user_id", $_user->id);
+
 			redirect(base_url('home'));
 		} else {
 			$dados['erro'] = "Usuário/Senha incorretos";
