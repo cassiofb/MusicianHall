@@ -8,6 +8,20 @@ class User_model extends CI_Model {
     public $password;
     public $type;
 
+    public function get_user_logged() 
+    {
+        $this->db->select('users.*, user_info.*');
+        $this->db->from('users');
+        $this->db->join('user_info', 'user_info.user_id = users.id');
+        $this->db->where('users.id', $this->session->get_userdata()['user_id']);
+        $query = $this->db->get();
+        if ($query) {
+            return $query->result();
+        } else {
+            return FALSE;
+        }
+    }
+
     public function get_last_ten_entries()
     {
         $this->db->select('users.name, users.email, user_info.*, functions.name as function');
