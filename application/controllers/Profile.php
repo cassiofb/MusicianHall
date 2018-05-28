@@ -9,6 +9,8 @@ class Profile extends MY_Controller {
 		parent::__construct();
 
 		$this->load->model('user_model');
+		$this->load->model('instruments_model');
+		$this->load->model('users_profile_model');
 	}
 	
 	public function index()	{
@@ -16,6 +18,8 @@ class Profile extends MY_Controller {
 		$data['namePage'] = ucwords( $data['page'] );
 		$data['pageIcon'] = 'icon-inbox';
 
+		$data['instruments'] = $this->instruments_model->get_all_entries();
+		$data['profiles'] = $this->users_profile_model->get_all_entries();
 		$data['user'] = $this->user_model->get_user_logged();
 
 		if (!$data['user']) {

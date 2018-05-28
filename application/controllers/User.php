@@ -63,5 +63,10 @@ class User extends MY_Controller {
 		//$this->dd($data['users']);
 		$this->load->view('base', $data);
 	}
+
+	public function update() {
+		$this->dd($_POST);
+		die;
+	}
 }
 

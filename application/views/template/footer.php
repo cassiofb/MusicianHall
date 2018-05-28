@@ -4,12 +4,11 @@
 <!--Footer-part-->
 
 <div class="row-fluid">
-	<div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a>
-	</div>
+	<div id="footer" class="span12"> 2018 &copy;. Desenvolvido por William e Cassiano </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 	 aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -26,7 +25,7 @@
 						<div class="controls">
 							<select class="form-control">
 								<option>Selecione</option>
-								<option>Filano</option>
+								<option>Fulano</option>
 								<option>Siclano</option>
 								<option>Beutrano</option>
 							</select>
@@ -49,11 +48,11 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <!--end-Footer-part-->
 
-<script src="<?php echo BASE_URL; ?>assets/js/excanvas.min.js"></script>
+<!-- <script src="<?php echo BASE_URL; ?>assets/js/excanvas.min.js"></script> -->
 <script src="<?php echo BASE_URL; ?>assets/js/jquery.min.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/jquery.ui.custom.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
@@ -61,18 +60,22 @@
 <script src="<?php echo BASE_URL; ?>assets/js/jquery.flot.resize.min.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/jquery.peity.min.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/fullcalendar.min.js"></script>
-<script src="<?php echo BASE_URL; ?>assets/js/matrix.js"></script>
-<script src="<?php echo BASE_URL; ?>assets/js/jquery.gritter.min.js"></script>
-<!--<script src="--><?php //echo BASE_URL; ?><!--assets/js/matrix.interface.js"></script>-->
-<script src="<?php echo BASE_URL; ?>assets/js/matrix.chat.js"></script>
-<script src="<?php echo BASE_URL; ?>assets/js/jquery.validate.js"></script>
-<script src="<?php echo BASE_URL; ?>assets/js/matrix.form_validation.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/bootstrap-colorpicker.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/bootstrap-datepicker.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/jquery.wizard.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/jquery.uniform.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/select2.min.js"></script>
-<script src="<?php echo BASE_URL; ?>assets/js/matrix.popover.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/jquery.gritter.min.js"></script>
+<!--<script src="--><?php //echo BASE_URL; ?><!--assets/js/matrix.interface.js"></script>-->
+<script src="<?php echo BASE_URL; ?>assets/js/jquery.validate.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/matrix.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/matrix.chat.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/matrix.form_common.js"></script>
+<!-- <script src="<?php echo BASE_URL; ?>assets/js/matrix.form_validation.js"></script> -->
+<script src="<?php echo BASE_URL; ?>assets/js/matrix.popover.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/matrix.tables.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/jquery.mask.min.js"></script>
 
 <script src="<?php echo BASE_URL; ?>assets/js/index.js"></script>
 

@@ -1,4 +1,3 @@
-<?php print_r( $user ); ?>
 <div class="container-fluid">
 	<div class="row-fluid">
 	  <div class="span12">
@@ -9,30 +8,22 @@
 	      	</span>
 	        <h5>Perfil de usuário</h5>
 	      </div>
+	      
 	      <div class="widget-content">
 	        <div class="row-fluid">
-	          <div class="span6">
+	          <div class="span4">
 	            <table class="">
 	              <tbody>
 	                <tr>
 	                  <td><h4><?php echo $user->name; ?></h4></td>
 	                </tr>
 	                <tr>
-	                  <td>Porto Alegre</td>
-	                </tr>
-	                <tr>
-	                  <td>Rio Grande do Sul</td>
-	                </tr>
-	                <tr>
-	                  <td>Telefone: <?php echo $user->phone_1; ?></td>
-	                </tr>
-	                <tr>
-	                  <td><?php echo $user->email; ?></td>
+	                  <td><?php echo $user->description; ?></td>
 	                </tr>
 	              </tbody>
 	            </table>
 	          </div>
-	          <div class="span6">
+	          <div class="span8">
 	            <table class="table table-bordered table-invoice">
 	              <tbody>
 	                <tr>
@@ -41,8 +32,16 @@
 	                  <td class="width70"><strong><?php echo $user->created_at; ?></strong></td>
 	                </tr>
 	                <tr>
-	                  <td>Enddereço:</td>
+	                  <td>Endereço:</td>
 	                  <td><strong><?php echo $user->address; ?></strong></td>
+	                </tr>
+	                <tr>
+	                	<td>Cidade:</td>
+	                  <td><strong>Porto Alegre</strong></td>
+	                </tr>
+	                <tr>
+	                	<td>Estado:</td>
+	                  <td><strong>Rio Grande do Sul</strong></td>
 	                </tr>
 	                <tr>
 	                  <td>Contato:</td>
@@ -52,87 +51,133 @@
 	                  <td>Email:</td>
 	                  <td><strong><?php echo $user->email; ?></strong></td>
 	                </tr>
-		              <tr>
-		              	<td class="width30">Descrição:</td>
-		                <td class="width70">
-		                  <?php echo $user->description; ?>
-		                </td>
-		              </tr>
 	               </tbody>
 	            </table>
 	          </div>
 	        </div>
 	        <div class="row-fluid">
-	          <div class="span12">
-	            <table class="table table-bordered table-invoice-full">
-	              <thead>
-	                <tr>
-	                  <th class="head0">Type</th>
-	                  <th class="head1">Desc</th>
-	                  <th class="head0 right">Qty</th>
-	                  <th class="head1 right">Price</th>
-	                  <th class="head0 right">Amount</th>
-	                </tr>
-	              </thead>
-	              <tbody>
-	                <tr>
-	                  <td>Firefox</td>
-	                  <td>Ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</td>
-	                  <td class="right">2</td>
-	                  <td class="right">$150</td>
-	                  <td class="right"><strong>$300</strong></td>
-	                </tr>
-	                <tr>
-	                  <td>Chrome Plugin</td>
-	                  <td>Tro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt u eos et accusamus et iusto odio dignissimos ducimus  deleniti atque</td>
-	                  <td class="right">1</td>
-	                  <td class="right">$1,200</td>
-	                  <td class="right"><strong>$1,2000</strong></td>
-	                </tr>
-	                <tr>
-	                  <td>Safari App</td>
-	                  <td>Rro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt u expedita distinctio</td>
-	                  <td class="right">2</td>
-	                  <td class="right">$850</td>
-	                  <td class="right"><strong>$1,700</strong></td>
-	                </tr>
-	                <tr>
-	                  <td>Opera App</td>
-	                  <td>Orro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut</td>
-	                  <td class="right">3</td>
-	                  <td class="right">$850</td>
-	                  <td class="right"><strong>$2,550</strong></td>
-	                </tr>
-	                <tr>
-	                  <td>Netscape Template</td>
-	                  <td>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</td>
-	                  <td class="right">5</td>
-	                  <td class="right">$50</td>
-	                  <td class="right"><strong>$250</strong></td>
-	                </tr>
-	              </tbody>
-	            </table>
-	            <table class="table table-bordered table-invoice-full">
-	              <tbody>
-	                <tr>
-	                  <td class="msg-invoice" width="85%"><h4>Payment method: </h4>
-	                    <a href="#" class="tip-bottom" data-original-title="Wire Transfer">Wire transfer</a> |  <a href="#" class="tip-bottom" data-original-title="Bank account">Bank account #</a> |  <a href="#" class="tip-bottom" data-original-title="SWIFT code">SWIFT code </a>|  <a href="#" class="tip-bottom" data-original-title="IBAN Billing address">IBAN Billing address </a></td>
-	                  <td class="right"><strong>Subtotal</strong> <br>
-	                    <strong>Tax (5%)</strong> <br>
-	                    <strong>Discount</strong></td>
-	                  <td class="right"><strong>$7,000 <br>
-	                    $600 <br>
-	                    $50</strong></td>
-	                </tr>
-	              </tbody>
-	            </table>
-	            <div class="pull-right">
-	              <h4><span>Amount Due:</span> $7,650.00</h4>
-	              <br>
-	              <a class="btn btn-primary btn-large pull-right" href="">Pay Invoice</a> </div>
+	          <div class="span5">
+
+	          	<div class="widget-box">
+				        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+				          <h5>Preferências</h5>
+				        </div>
+				        <div class="widget-content nopadding">
+				          <form id="profile-form" class="form-horizontal" action="<?php echo base_url('user/update'); ?>" method="POST">
+				          <input type="hidden" name="action" value="preferece">
+				            <div class="control-group">
+				              <label class="control-label">Perfil</label>
+				              <div class="controls">
+				                <select name="profile">
+				                	<option>Selecione</option>
+				                	<?php foreach($profiles as $k => $v) : ?>
+				                  	<option value="<?php echo $v->initials; ?>"><?php echo $v->name; ?></option>
+				                  <?php endforeach; ?>
+				                </select>
+				              </div>
+				            </div>
+				            <div class="control-group">
+				              <label class="control-label">Instrumentos</label>
+				              <div class="controls">
+				                <select multiple name="instrument">
+				                  <?php foreach($instruments as $k => $v) : ?>
+				                  	<option value="<?php echo $v->id; ?>"><?php echo $v->name; ?></option>
+				                  <?php endforeach; ?>
+				                </select>
+				              </div>
+				            </div>
+				            <div class="control-group">
+				              <label class="control-label">Prioridade de busca</label>
+				              <div class="controls">
+				                <label><input type="radio" name="priority" value="proximity" />Proximidade</label>
+				                <label><input type="radio" name="priority" value="style" />Gênero músical</label>
+				                <label><input type="radio" name="priority" value="experience" />Experiência</label>
+				              </div>
+				            </div>
+				            <!-- <div class="control-group">
+				              <label for="checkboxes" class="control-label">Data Toggle checkbox</label>
+				              <div class="controls">
+				                <div data-toggle="buttons-checkbox" class="btn-group">
+				                  <button class="btn btn-primary" type="button">Left</button>
+				                  <button class="btn btn-primary" type="button">Middle</button>
+				                  <button class="btn btn-primary" type="button">Right</button>
+				                </div>
+				              </div>
+				            </div>
+				            <div class="control-group">
+				              <label for="checkboxes" class="control-label">Data Radio button</label>
+				              <div class="controls">
+				                <div data-toggle="buttons-radio" class="btn-group">
+				                  <button class="btn btn-primary" type="button">Left</button>
+				                  <button class="btn btn-primary" type="button">Middle</button>
+				                  <button class="btn btn-primary" type="button">Right</button>
+				                </div>
+				              </div>
+				            </div>
+				            <div class="control-group">
+				              <label class="control-label">File upload input</label>
+				              <div class="controls">
+				                <input type="file" />
+				              </div>
+				            </div>
+				            <div class="control-group">
+				              <label class="control-label">Disabled Input</label>
+				              <div class="controls">
+				                <input type="text" placeholder="You can't type anything…" disabled="" class="span11">
+				              </div>
+				            </div> -->
+				            <div class="form-actions">
+				              <button type="submit" class="btn btn-success">Salvar</button>
+				            </div>
+				          </form>
+				        </div>
+				      </div>
+	            
+	          </div><!-- ./span6 -->
+	          <div class="span7">
+	          	<div class="widget-box">
+			          <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+			            <h5>Informações para pagamento</h5>
+			          </div>
+			          <div class="widget-content nopadding">
+			            <form class="form-horizontal" method="post" action="<?php echo base_url('user/update'); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
+			            <input type="hidden" name="action" value="payments">
+			              <div class="control-group">
+			                <label class="control-label" style="width: 200px;">Número do cartão de crédito</label>
+			                <div class="controls" style="margin-left: 220px;">
+			                  <input type="text" name="number_cc" id="number_cc" style="width: 80%;">
+			                </div>
+			              </div>
+			              <div class="control-group">
+			                <label class="control-label" style="width: 200px;">Nome (igual está no cartão)</label>
+			                <div class="controls" style="margin-left: 220px;">
+			                  <input type="text" name="name_cc" id="name_cc" style="width: 80%;">
+			                </div>
+			              </div>
+			              <div class="control-group">
+			                <label class="control-label" style="width: 200px;">CVV</label>
+			                <div class="controls" style="margin-left: 220px;">
+			                  <input type="text" name="cvv" id="cvv" style="width: 80%;">
+			                </div>
+			              </div>
+			              <div class="control-group">
+			                <label class="control-label" style="width: 200px;">Data de validade do cartão</label>
+			                <div class="controls" style="margin-left: 220px;">
+			                  <input type="text" name="validate_cc" id="validate_cc" style="width: 80%;">
+			                </div>
+			              </div>
+			              <div class="form-actions">
+			                <input type="submit" value="Salvar" class="btn btn-success">
+			              </div>
+			            </form>
+			          </div>
+			        </div>
 	          </div>
+
 	        </div>
-	      </div>
+
+	      </div><!-- ./widget-content -->
+
 	    </div>
 	  </div>
 	</div>
