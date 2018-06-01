@@ -25,8 +25,9 @@ class Instruments_model extends CI_Model {
 
     public function get_instruments_by_user($id) {
         $return = $this->db->select('instrument_id')->like('user_id', $id)->get('users_instruments')->result();
+		$arr = [];
         foreach ($return as $key => $val) {
-            $arr[] = $val->instrument_id;
+            array_push($arr, $val->instrument_id);
         }
         return $arr;
     }

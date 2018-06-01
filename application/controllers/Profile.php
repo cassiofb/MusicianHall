@@ -24,6 +24,9 @@ class Profile extends MY_Controller {
 		$data['profiles'] = $this->users_profile_model->get_all_entries();
 		$data['user'] = $this->user_model->get_user_logged();
 		$data['user_instruments'] = $this->instruments_model->get_instruments_by_user($id);
+		if (!isset($data['user_instruments'])) {
+			$data['user_instruments'] = [];
+		}
 
 		if (!$data['user']) {
 			redirect('login');
