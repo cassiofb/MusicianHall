@@ -8,8 +8,12 @@
   		<?php if (isset($contacts) && is_array($contacts)) : ?>
 	  		<?php foreach ($contacts as $key => $val) : ?>
 		        <li class="bg_lh card" style="width: 20%;">
-		        	<i class="icon-zoom-in icon-button-left icon-button-top" title="Detalhes"></i>
-		        	<a href="<?php echo BASE_URL . 'contacts/remove/' . $val->connection_id ?>"><i class="icon-trash icon-button-right icon-button-top" title="Remover contato"></i></a>
+					<a href="<?php echo BASE_URL . 'contacts/profile/' . $val->connection_id ?>">
+						<i class="icon-zoom-in icon-button-left icon-button-top" title="Detalhes"></i>
+					</a>
+		        	<a href="<?php echo BASE_URL . 'contacts/remove/' . $val->connection_id ?>">
+						<i class="icon-trash icon-button-right icon-button-top" title="Remover contato"></i>
+					</a>
 		        	<i class="icon-star-empty icon-button-left icon-button-bottom" title="Favoritar contato"></i>
 		        	<i class="icon-envelope-alt icon-button-right icon-button-bottom" title="Enviar mensagem"></i>
 		        	<i class="icon-user"></i> 
