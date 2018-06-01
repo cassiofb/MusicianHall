@@ -23,6 +23,14 @@ class Instruments_model extends CI_Model {
         return $query->result();
     }
 
+    public function get_instruments_by_user($id) {
+        $return = $this->db->select('instrument_id')->like('user_id', $id)->get('users_instruments')->result();
+        foreach ($return as $key => $val) {
+            $arr[] = $val->instrument_id;
+        }
+        return $arr;
+    }
+
     public function remove($id) {
         $this->db->where('id', $id);
         $this->db->delete($this->table);

@@ -62,6 +62,37 @@ class User_model extends CI_Model {
         $this->db->update('users', $this, array('id' => $_POST['id']));
     }
 
+    public function update_info($post) 
+    {
+        $id = $this->session->get_userdata()['user_id'];
+
+        if ($post['action'] === 'payments') {
+            
+            $this->db->set('number_cc', $post['number_cc']);
+            $this->db->set('name_cc', $post['name_cc']);
+            $this->db->set('cvv', $post['cvv']);
+            $this->db->set('validate_cc', join("-", array_reverse(explode('/', $post['validate_cc']))));
+            $this->db->where('user_id', $id);
+            $this->db->update('user_info');
+
+        } else {
+            $this->db->set('profile_type', $post['profile']);
+            $this->db->set('priority_search', $post['priority']);
+            $this->db->where('user_id', $id);
+            $this->db->update('user_info');
+            
+            if (isset($post['instrument'])) {
+                $this->db->delete('users_instruments', array('user_id' => $id));
+                foreach ($post['instrument'] as $key => $value) {
+                    $data[$key]['user_id'] = $id;
+                    $data[$key]['instrument_id'] = $value;
+                }
+                $this->db->insert_batch('users_instruments', $data);
+            }
+        }
+
+    }
+
     public function get_entries_by_term($term, $limit = null, $offset = null)
     {
         $this->db->select('users.name, users.email, user_info.*, functions.name as function');

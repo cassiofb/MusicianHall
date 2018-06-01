@@ -71,7 +71,7 @@
 				                <select name="profile">
 				                	<option>Selecione</option>
 				                	<?php foreach($profiles as $k => $v) : ?>
-				                  	<option value="<?php echo $v->initials; ?>"><?php echo $v->name; ?></option>
+				                  	<option value="<?php echo $v->initials; ?>" <?php echo $user->profile_type === $v->initials ? 'selected' : '' ; ?> ><?php echo $v->name; ?></option>
 				                  <?php endforeach; ?>
 				                </select>
 				              </div>
@@ -79,9 +79,9 @@
 				            <div class="control-group">
 				              <label class="control-label">Instrumentos</label>
 				              <div class="controls">
-				                <select multiple name="instrument">
+				                <select multiple name="instrument[]">
 				                  <?php foreach($instruments as $k => $v) : ?>
-				                  	<option value="<?php echo $v->id; ?>"><?php echo $v->name; ?></option>
+				                  	<option value="<?php echo $v->id; ?>" <?php echo in_array($v->id, $user_instruments) ? 'selected' : '' ; ?>><?php echo $v->name; ?></option>
 				                  <?php endforeach; ?>
 				                </select>
 				              </div>
@@ -89,9 +89,9 @@
 				            <div class="control-group">
 				              <label class="control-label">Prioridade de busca</label>
 				              <div class="controls">
-				                <label><input type="radio" name="priority" value="proximity" />Proximidade</label>
-				                <label><input type="radio" name="priority" value="style" />Gênero músical</label>
-				                <label><input type="radio" name="priority" value="experience" />Experiência</label>
+				                <label><input type="radio" name="priority" <?php echo $user->priority_search === 'proximity' ? 'checked' : ''; ?> value="proximity" />Proximidade</label>
+				                <label><input type="radio" name="priority" <?php echo $user->priority_search === 'style' ? 'checked' : ''; ?> value="style" />Gênero músical</label>
+				                <label><input type="radio" name="priority" <?php echo $user->priority_search === 'experience' ? 'checked' : ''; ?> value="experience" />Experiência</label>
 				              </div>
 				            </div>
 				            <!-- <div class="control-group">
@@ -145,25 +145,25 @@
 			              <div class="control-group">
 			                <label class="control-label" style="width: 200px;">Número do cartão de crédito</label>
 			                <div class="controls" style="margin-left: 220px;">
-			                  <input type="text" name="number_cc" id="number_cc" style="width: 80%;">
+			                  <input type="text" name="number_cc" id="number_cc" value="<?php echo isset($user->number_cc) ? $user->number_cc : ''; ?>" style="width: 80%;">
 			                </div>
 			              </div>
 			              <div class="control-group">
 			                <label class="control-label" style="width: 200px;">Nome (igual está no cartão)</label>
 			                <div class="controls" style="margin-left: 220px;">
-			                  <input type="text" name="name_cc" id="name_cc" style="width: 80%;">
+			                  <input type="text" name="name_cc" id="name_cc" value="<?php echo isset($user->name_cc) ? $user->name_cc : ''; ?>" style="width: 80%;">
 			                </div>
 			              </div>
 			              <div class="control-group">
 			                <label class="control-label" style="width: 200px;">CVV</label>
 			                <div class="controls" style="margin-left: 220px;">
-			                  <input type="text" name="cvv" id="cvv" style="width: 80%;">
+			                  <input type="text" name="cvv" id="cvv" value="<?php echo isset($user->cvv) ? $user->cvv : ''; ?>" style="width: 80%;">
 			                </div>
 			              </div>
 			              <div class="control-group">
 			                <label class="control-label" style="width: 200px;">Data de validade do cartão</label>
 			                <div class="controls" style="margin-left: 220px;">
-			                  <input type="text" name="validate_cc" id="validate_cc" style="width: 80%;">
+			                  <input type="text" name="validate_cc" id="validate_cc" value="<?php echo isset($user->validate_cc) ? $user->validate_cc : ''; ?>" style="width: 80%;">
 			                </div>
 			              </div>
 			              <div class="form-actions">
