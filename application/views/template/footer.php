@@ -70,7 +70,7 @@
 <script src="<?php echo BASE_URL; ?>assets/js/jquery.validate.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/matrix.js"></script>
-<script src="<?php echo BASE_URL; ?>assets/js/matrix.chat.js"></script>
+<!-- <script src="<?php echo BASE_URL; ?>assets/js/matrix.chat.js"></script> -->
 <script src="<?php echo BASE_URL; ?>assets/js/matrix.form_common.js"></script>
 <!-- <script src="<?php echo BASE_URL; ?>assets/js/matrix.form_validation.js"></script> -->
 <script src="<?php echo BASE_URL; ?>assets/js/matrix.popover.js"></script>

@@ -10,19 +10,46 @@
         </div>
         <div class="panel-content nopadding">
            <ul class="contact-list">
-              <li id="user-Alex" class="online"><a href=""><img alt="" src="assets/img/demo/av1.jpg" /> <span>Alex</span></a></li>
-              <li id="user-Linda"><a href=""><img alt="" src="assets/img/demo/av2.jpg" /> <span>Linda</span></a></li>
-              <li id="user-John" class="online new"><a href=""><img alt="" src="assets/img/demo/av3.jpg" /> <span>John</span></a>
-                 <span class="msg-count badge badge-info">3</span>
+              <?php foreach ($contacts as $key => $val) : $count = $key+1; ?>
+                <li id="user-<?php echo $key; ?>" class="online">
+                  <a href="">
+                    <img alt="thumbnail" src="<?php echo 'assets/img/demo/av' . $count . '.jpg'; ?>" />
+                    <span><?php echo $val->name; ?></span>
+                  </a>
+                </li>
+              <?php endforeach; ?>
+              
+
+              <!-- <li id="user-Linda"><a href=""><img alt="" src="assets/img/demo/av2.jpg" /> <span>Linda</span></a></li>
+              
+              <li id="user-John" class="online new">
+                <a href="">
+                  <img alt="" src="assets/img/demo/av3.jpg" />
+                  <span>John</span>
+                </a>
+                <span class="msg-count badge badge-info">3</span>
               </li>
+
               <li id="user-Mark" class="online"><a href=""><img alt="" src="assets/img/demo/av4.jpg" /> <span>Mark</span></a></li>
-              <li id="user-Maxi" class="online"><a href=""><img alt="" src="assets/img/demo/av5.jpg" /> <span>Maxi</span></a></li>
+              !-->
+           
            </ul>
         </div>
      </div>
      <div class="chat-content panel-left2">
         <div class="chat-messages" id="chat-messages">
-           <div id="chat-messages-inner"></div>
+           <div id="chat-messages-inner">
+            
+            <p id="msg-1" class="user-linda" style="display: block;">
+              <span class="msg-block">
+                <img src="assets/img/demo/av2.jpg" alt="thumbnail" />
+                <strong>Linda</strong>
+                <span class="time">- 19:11</span>
+                <span class="msg">Hello Every one do u want to freindship with me?</span>
+              </span>
+            </p>
+
+           </div>
         </div>
         <div class="chat-message well">
            <button class="btn btn-success">Send</button>

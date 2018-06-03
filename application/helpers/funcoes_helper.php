@@ -41,6 +41,25 @@ if ( ! function_exists('convert_date_to_en_format'))
 {
 	function convert_date_to_en_format($date)
 	{
-		return join('/', array_reverse(explode('-', $date)));
+		return join('-', array_reverse(explode('/', $date)));
+	}
+}
+
+if ( ! function_exists('getFunction_by_type'))
+{
+	function getFunction_by_type($type)
+	{
+		$arr = [
+			'C' => 'Cantor',
+			'I' => 'Instrumentista',
+			'P' => 'Produtor',
+			'S' => 'Professor',
+			'A' => 'Aluno',
+			'E' => 'Empresário',
+			'R' => 'Roadie',
+			'O' => 'Outro'
+		];
+		
+		return $arr[$type];
 	}
 }

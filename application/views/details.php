@@ -51,14 +51,18 @@
 									<td>Email:</td>
 									<td><strong><?php echo $user->email; ?></strong></td>
 								</tr>
+								<?php if (isset($user->profile_type)) : ?>
 								<tr>
 									<td>Perfil:</td>
-									<td><strong><?php echo $user->profile_type; ?></strong></td>
+									<td><strong><?php echo getFunction_by_type($user->profile_type); ?></strong></td>
 								</tr>
+								<?php endif; ?>
+								<?php if (!empty($user_instruments)) : ?>
 								<tr>
 									<td>Instrumentos:</td>
-									<td><strong><?php print_r($user_instruments); ?></strong></td>
+									<td><strong><?php echo join(', ', $user_instruments); ?></strong></td>
 								</tr>
+								<?php endif; ?>
 								</tbody>
 							</table>
 						</div>
